@@ -9,8 +9,13 @@ def palindrome(word):
   return False
 
 #Main Code
-userInput = raw_input("Please input string to be tested: ")
-if palindrome(userInput):
-  print(userInput + " is a palindrome.")
-else:
-  print(userInput + " is not a palindrome.")
+
+#preset words:
+wordList = ["Oxo", "OXO", "123454321", "ROTATOR", "12345 54321", raw_input("Please input string to be tested: ")]
+
+for i in range (0, len(wordList)):
+  if palindrome(wordList[i]):
+    print(wordList[i] + " is a palindrome.")
+  else:
+    print(wordList[i] + " is not a palindrome.")
+
